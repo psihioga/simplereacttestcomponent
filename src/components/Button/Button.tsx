@@ -6,7 +6,7 @@ export interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  const style = `bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded`;  
+  const style = `bg-blue-500  text-black font-bold py-2 px-4`;  
   return <button className={style}>{props.label}</button>;
 };
 

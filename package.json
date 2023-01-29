@@ -1,14 +1,15 @@
 {
   "name": "@psihioga/simplereacttestcomponent",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "simple react components lib",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/psihioga"
   },
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
-    "tailwind": "npx tailwindcss  -i ./tailwind.css -o ./src/tailwind.css --minify",
-    "storybook": "start-storybook -p 6006",
+    "conc": "concurrently 'yarn:watch:*'",
+    "watch:tailwind": "npx tailwindcss  -i ./tailwind.css -o ./src/tailwind.css --minify --watch",
+    "watch:storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "author": "psihioga",
@@ -37,10 +38,17 @@
     "tslib": "^2.5.0",
     "typescript": "^4.9.4"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
