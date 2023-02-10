@@ -7,8 +7,9 @@
   },
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
+    "svgr": "svgr --icon --title-prop -d src/icons icons",
     "conc": "concurrently 'yarn:watch:*'",
-    "watch:tailwind": "npx tailwindcss  -i ./tailwind.css -o ./src/tailwind.css --minify --watch",
+    "watch:tailwind": "npx tailwindcss  -i ./tailwind.css -o ./src/tailwind.css --watch",
     "watch:storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -27,6 +28,7 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
+    "@svgr/cli": "^6.5.1",
     "@types/react": "^18.0.27",
     "babel-loader": "^8.3.0",
     "react": "^18.2.0",
